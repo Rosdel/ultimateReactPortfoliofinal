@@ -34,12 +34,67 @@ function App() {
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12">
-            <div className="d-flex justify-content-center custom-div-outer-img">
+            <div className="d-flex justify-content-center Anim">
               <img
                 className="img-fluid custom-img"
                 alt="heroimgae"
                 src="https://res.cloudinary.com/dbmn882qe/image/upload/v1658139213/3t_z9twok.png"
               />
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div className="about-me-section aboutme-inside my-5">
+        <div className="d-flex flex-column">
+          <span className="about-me-text">About Me</span>
+          <span className="why-text-sub">Why Choose Me</span>
+          <div className="row justify-content-center shadow-lg my-5">
+            <div
+              className="col-lg-6
+              col-md-6
+              col-sm-12
+              d-flex
+              align-item-center
+              justify-content-center"
+            >
+              <lottie-player
+                src="https://assets2.lottiefiles.com/private_files/lf30_igfaivqx.json"
+                background="transparent"
+                speed="1"
+                style={{ width: "500px", height: "500px" }}
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+            <div
+              className="col-lg-6
+              col-md-6
+              col-sm-12
+              py-5
+              d-flex
+              flex-column"
+            >
+              <span className="some-text-about-me">
+                Fullstacked Web Developer with a background knowledge of Bsc in
+                Engineering,along with a knack of building apllications with
+                utmost efficiency. Strong Professional willing to be an asset
+                for your Organisation.
+              </span>
+              <span className="few-highlights">
+                <span className="few-text">Here are few Highlights</span>
+                <span className="few-list">
+                  <ul>
+                    <li>FullStacked Web Development</li>
+                    <li>Interactive front End Design</li>
+                    <li>Tailwind CSS React.js --leveling</li>
+                    <li>Node.js ,MongoDB and Express--leveling</li>
+                    <li>Adobe Photoshop CC</li>
+                    <li>Data Analytics</li>
+                  </ul>
+                </span>
+              </span>
             </div>
           </div>
         </div>
