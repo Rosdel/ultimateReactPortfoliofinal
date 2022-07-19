@@ -49,7 +49,7 @@ function App() {
       <div className="about-me-section aboutme-inside my-5">
         <div className="d-flex flex-column">
           <span className="about-me-text">About Me</span>
-          <span className="why-text-sub">Why Choose Me</span>
+          <span className="why-text-sub">Why Choose Me ?</span>
           <div className="row justify-content-center shadow-lg my-5">
             <div
               className="col-lg-6
@@ -88,10 +88,10 @@ function App() {
                   <ul>
                     <li>FullStacked Web Development</li>
                     <li>Interactive front End Design</li>
-                    <li>Tailwind CSS React.js --leveling</li>
-                    <li>Node.js ,MongoDB and Express--leveling</li>
                     <li>Adobe Photoshop CC</li>
                     <li>Data Analytics</li>
+                    <li>React.js & tailwind CSS--leveling</li>
+                    <li>Node.js ,MongoDB and Express--leveling</li>
                   </ul>
                 </span>
               </span>
