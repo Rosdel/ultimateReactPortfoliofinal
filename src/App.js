@@ -1,6 +1,15 @@
+import { useState } from "react"
 import "./App.css"
+import Education from "./Education"
+import Programming from "./Programming"
+import Project from "./Project"
+import Work from "./Work"
 
 function App() {
+  const [education, seteducation] = useState(true)
+  const [workhistory, setworkhistory] = useState(false)
+  const [programmings, setprogrammings] = useState(false)
+  const [projects, setprojects] = useState(false)
   return (
     <div className="App">
       <div className="herosection px-10 py-5">
@@ -97,6 +106,43 @@ function App() {
               </span>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="resume-outer-section d-flex flex-column  ">
+        <span className="about-me-text">Resume</span>
+        <span className="why-text-sub">My formal Bio details 📚</span>
+      </div>
+      <div className="resume-new-section row">
+        <div
+          className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row "
+          style={{ width: "70%", marginInline: "auto" }}
+        >
+          <div className="d-flex flex-column bg-new text-dark">
+            <span className="icons-span">
+              <i className="fa-solid fa-graduation-cap"></i>
+            </span>
+            <span className="icons-span">
+              <i className="fa-solid fa-laptop-code"></i>
+            </span>
+            <span className="icons-span">
+              <i className="fa-solid fa-laptop-code"></i>
+            </span>
+            <span className="icons-span">
+              <i className="fa-solid fa-diagram-project"></i>
+            </span>
+          </div>
+          <div className="d-flex flex-column">
+            <span className="resume-options-items">Education</span>
+            <span className="resume-options-items">Work</span>
+            <span className="resume-options-items">Programming</span>
+            <span className="resume-options-items">Projects</span>
+          </div>
+        </div>
+        <div className="col-lg-8 col-md-8 col-sm-12 resume-right-secction ">
+          {(education === true) & <Education />}
+          {(workhistory === true) & <Work />}
+          {(programmings === true) & <Programming />}
+          {(projects === true) & <Project />}
         </div>
       </div>
     </div>
