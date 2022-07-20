@@ -10,11 +10,21 @@ function App() {
   const [workhistory, setworkhistory] = useState(false)
   const [programmings, setprogrammings] = useState(false)
   const [projects, setprojects] = useState(false)
+  function SetAllFalse() {
+    seteducation(false)
+    setworkhistory(false)
+    setprogrammings(false)
+    setprojects(false)
+  }
+  function ChangeState(function1, state1) {
+    SetAllFalse()
+    function1(state1)
+  }
   return (
     <div className="App">
       <div className="herosection px-10 py-5">
         <nav className="d-flex flex-row justify-content-between">
-          <span className="brand-name">CODING HEROES..!!</span>
+          <span className="brand-name"> &#174; CODING HEROES..!!</span>
           <div className="d-flex flex-row">
             <span className="mx-4 nav-items">Home</span>
             <span className="mx-4 nav-items">About Me</span>
@@ -99,7 +109,7 @@ function App() {
                     <li>Interactive front End Design</li>
                     <li>Adobe Photoshop CC</li>
                     <li>Data Analytics</li>
-                    <li>React.js & tailwind CSS--leveling</li>
+                    <li>React.js &#38; tailwind CSS--leveling</li>
                     <li>Node.js ,MongoDB and Express--leveling</li>
                   </ul>
                 </span>
@@ -112,12 +122,12 @@ function App() {
         <span className="about-me-text">Resume</span>
         <span className="why-text-sub">My formal Bio details 📚</span>
       </div>
-      <div className="resume-new-section row">
-        <div
-          className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row "
-          style={{ width: "70%", marginInline: "auto" }}
-        >
-          <div className="d-flex flex-column bg-new text-dark">
+      <div
+        className="resume-new-section row"
+        style={{ width: "70%", marginInline: "auto" }}
+      >
+        <div className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row ">
+          <div className="d-flex flex-column bg-new text-dark ">
             <span className="icons-span">
               <i className="fa-solid fa-graduation-cap"></i>
             </span>
@@ -132,10 +142,38 @@ function App() {
             </span>
           </div>
           <div className="d-flex flex-column">
-            <span className="resume-options-items">Education</span>
-            <span className="resume-options-items">Work</span>
-            <span className="resume-options-items">Programming</span>
-            <span className="resume-options-items">Projects</span>
+            <span
+              className="resume-options-items"
+              onClick={() => {
+                seteducation(true)
+              }}
+            >
+              Education
+            </span>
+            <span
+              className="resume-options-items"
+              onClick={() => {
+                workhistory(true)
+              }}
+            >
+              Work
+            </span>
+            <span
+              className="resume-options-items"
+              onClick={() => {
+                setprogrammings(true)
+              }}
+            >
+              Programming
+            </span>
+            <span
+              className="resume-options-items"
+              onClick={() => {
+                setprojects(true)
+              }}
+            >
+              Projects
+            </span>
           </div>
         </div>
         <div className="col-lg-8 col-md-8 col-sm-12 resume-right-secction ">
