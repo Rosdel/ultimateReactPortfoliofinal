@@ -158,3 +158,55 @@
 .resume-options-items {
   text-align: left;
 }
+/* -------------------RESUMEE CSS------------ */
+.resume-options-items {
+  width: 1%;
+  transition: all 0.3s ease-in-out;
+  padding-block: 24px;
+  padding-inline: 24px;
+  color: #000;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.resume-options-items:hover {
+  width: 100%;
+  background: linear-gradient(
+    -90deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+  color: white;
+}
+.icons-span {
+  padding-block: 24px;
+  padding-inline: 24px;
+}
+.selected {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+  color: white;
+  width: 100%;
+}
+.bg-new {
+  background: linear-gradient(
+    -45deg,
+    var(--primary-app-color),
+    var(--secondary-app-color)
+  );
+}
+.resume-outer-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--primary-app-color);
+  color: white;
+  clip-path: polygon(0 18%, 100% 0, 100% 88%, 0 100%);
+}
+.resume-new-section {
+  margin-top: 50px;
+  background: white;
+  box-shadow: 10px 10px 10px 10px #54ba9143;
+}

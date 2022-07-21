@@ -121,14 +121,16 @@ function App() {
       {/* RESUME OUTER SECTION */}
       <div className="resume-outer-section d-flex flex-column">
         <span className="about-me-text">Resume</span>
-        <span className="why-text-sub">My formal Bio details 📚</span>
+        <span className="why-text-sub text-white">
+          My formal Bio details 📚
+        </span>
         {/* LOWER RESUMME LEFT */}
         <div
           className="resume-new-section row"
           style={{ width: "70%", marginInline: "auto" }}
         >
           <div className="col-lg-4 col-md-4  col-sm-12 resume-left-section d-flex flex-row px-0 shadow-lg">
-            <div className="d-flex flex-column bg-new text-dark ">
+            <div className="d-flex flex-column bg-new text-white ">
               <span className="icons-span">
                 <i className="fa-solid fa-graduation-cap"></i>
               </span>
@@ -145,7 +147,11 @@ function App() {
             <div className="d-flex flex-column">
               <div className="d-flex flex-column">
                 <span
-                  className="resume-options-items"
+                  className={
+                    education === false
+                      ? "resume-options-items"
+                      : "selected resume-options-items"
+                  }
                   onClick={() => {
                     ChangeState(seteducation, true)
                   }}
@@ -153,7 +159,11 @@ function App() {
                   Education
                 </span>
                 <span
-                  className="resume-options-items"
+                  className={
+                    workhistory === false
+                      ? "resume-options-items"
+                      : "selected resume-options-items"
+                  }
                   onClick={() => {
                     ChangeState(setworkhistory, true)
                   }}
@@ -161,7 +171,11 @@ function App() {
                   Work
                 </span>
                 <span
-                  className="resume-options-items"
+                  className={
+                    programmings === false
+                      ? "resume-options-items"
+                      : "selected resume-options-items"
+                  }
                   onClick={() => {
                     ChangeState(setprogrammings, true)
                   }}
@@ -169,7 +183,11 @@ function App() {
                   Programming
                 </span>
                 <span
-                  className="resume-options-items"
+                  className={
+                    projects === false
+                      ? "resume-options-items"
+                      : "selected resume-options-items"
+                  }
                   onClick={() => {
                     ChangeState(setprojects, true)
                   }}
