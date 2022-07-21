@@ -118,69 +118,45 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="resume-outer-section d-flex flex-column  ">
+      {/* RESUME OUTER SECTION */}
+      <div className="resume-outer-section d-flex flex-column">
         <span className="about-me-text">Resume</span>
         <span className="why-text-sub">My formal Bio details 📚</span>
-      </div>
-      <div
-        className="resume-new-section row"
-        style={{ width: "70%", marginInline: "auto" }}
-      >
-        <div className="col-lg-4 col-md-4 col-sm-12 resume-left-section d-flex px-0 shadow-lg flex-row ">
-          <div className="d-flex flex-column bg-new text-dark ">
-            <span className="icons-span">
-              <i className="fa-solid fa-graduation-cap"></i>
-            </span>
-            <span className="icons-span">
-              <i className="fa-solid fa-laptop-code"></i>
-            </span>
-            <span className="icons-span">
-              <i className="fa-solid fa-laptop-code"></i>
-            </span>
-            <span className="icons-span">
-              <i className="fa-solid fa-diagram-project"></i>
-            </span>
+        {/* LOWER RESUMME LEFT */}
+        <div
+          className="resume-new-section row"
+          style={{ width: "70%", marginInline: "auto" }}
+        >
+          <div className="col-lg-4 col-md-4  col-sm-12 resume-left-section d-flex flex-row px-0 shadow-lg">
+            <div className="d-flex flex-column bg-new text-dark ">
+              <span className="icons-span">
+                <i className="fa-solid fa-graduation-cap"></i>
+              </span>
+              <span className="icons-span">
+                <i className="fa-solid fa-laptop-code"></i>
+              </span>
+              <span className="icons-span">
+                <i className="fa-solid fa-laptop-code"></i>
+              </span>
+              <span className="icons-span">
+                <i className="fa-solid fa-diagram-project"></i>
+              </span>
+            </div>
+            <div className="d-flex flex-column">
+              <div className="d-flex flex-column">
+                <span className="resume-options-items">Education</span>
+                <span className="resume-options-items">Work</span>
+                <span className="resume-options-items">Programming</span>
+                <span className="resume-options-items">Projects</span>
+              </div>
+            </div>
           </div>
-          <div className="d-flex flex-column">
-            <span
-              className="resume-options-items"
-              onClick={() => {
-                seteducation(true)
-              }}
-            >
-              Education
-            </span>
-            <span
-              className="resume-options-items"
-              onClick={() => {
-                workhistory(true)
-              }}
-            >
-              Work
-            </span>
-            <span
-              className="resume-options-items"
-              onClick={() => {
-                setprogrammings(true)
-              }}
-            >
-              Programming
-            </span>
-            <span
-              className="resume-options-items"
-              onClick={() => {
-                setprojects(true)
-              }}
-            >
-              Projects
-            </span>
+          <div className="col-lg-8 col-md-8 resume-right-section">
+            {education === true && <Education />}
+            {workhistory === true && <Work />}
+            {programmings === true && <Programming />}
+            {projects === true && <Project />}
           </div>
-        </div>
-        <div className="col-lg-8 col-md-8 col-sm-12 resume-right-secction ">
-          {(education === true) & <Education />}
-          {(workhistory === true) & <Work />}
-          {(programmings === true) & <Programming />}
-          {(projects === true) & <Project />}
         </div>
       </div>
     </div>
