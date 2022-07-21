@@ -144,14 +144,42 @@ function App() {
             </div>
             <div className="d-flex flex-column">
               <div className="d-flex flex-column">
-                <span className="resume-options-items">Education</span>
-                <span className="resume-options-items">Work</span>
-                <span className="resume-options-items">Programming</span>
-                <span className="resume-options-items">Projects</span>
+                <span
+                  className="resume-options-items"
+                  onClick={() => {
+                    ChangeState(seteducation, true)
+                  }}
+                >
+                  Education
+                </span>
+                <span
+                  className="resume-options-items"
+                  onClick={() => {
+                    ChangeState(setworkhistory, true)
+                  }}
+                >
+                  Work
+                </span>
+                <span
+                  className="resume-options-items"
+                  onClick={() => {
+                    ChangeState(setprogrammings, true)
+                  }}
+                >
+                  Programming
+                </span>
+                <span
+                  className="resume-options-items"
+                  onClick={() => {
+                    ChangeState(setprojects, true)
+                  }}
+                >
+                  Projects
+                </span>
               </div>
             </div>
           </div>
-          <div className="col-lg-8 col-md-8 resume-right-section">
+          <div className="col-lg-8 col-md-8 col-sm-12 resume-right-section">
             {education === true && <Education />}
             {workhistory === true && <Work />}
             {programmings === true && <Programming />}
