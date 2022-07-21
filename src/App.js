@@ -3,6 +3,7 @@ import "./App.css"
 import Education from "./Education"
 import Programming from "./Programming"
 import Project from "./Project"
+import Testimonials from "./Testimonials"
 import Work from "./Work"
 
 function App() {
@@ -203,6 +204,16 @@ function App() {
             {programmings === true && <Programming />}
             {projects === true && <Project />}
           </div>
+        </div>
+      </div>
+      {/*-------- TESTIMONIALS PART---------- */}
+      <div className="testimonials-part my-5">
+        <div className="testimonials-innerpart d-flex flex-column">
+          <span className="about-me-text">Testimonials</span>
+          <span className="why-text-sub mb-5">
+            What my Client says about me
+          </span>
+          <Testimonials />
         </div>
       </div>
     </div>

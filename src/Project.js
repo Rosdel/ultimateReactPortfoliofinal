@@ -8,9 +8,6 @@ export default function Project() {
             <span className="university-name">Javascript</span>
             <span className="university-degree">Developed A dice Game</span>
           </div>
-          <div>
-            <span className="yearPassedOut"></span>
-          </div>
         </div>
         <div className="education-one my-4 justify-content-between d-flex flex-row">
           <div className="d-flex flex-column new-one">
@@ -18,9 +15,6 @@ export default function Project() {
             <span className="university-degree">
               Developed an Ecommerce website &#38; this Portfolio
             </span>
-          </div>
-          <div>
-            <span className="yearPassedOut"></span>
           </div>
         </div>
         <div className="education-one my-4 justify-content-between d-flex flex-row">
@@ -31,9 +25,7 @@ export default function Project() {
               Implemented payment API for the website
             </span>
           </div>
-          <div>
-            <span className="yearPassedOut">2009-2012</span>
-          </div>
+          <div></div>
         </div>
       </div>
     </>
