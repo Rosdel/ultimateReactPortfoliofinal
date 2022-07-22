@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./App.css"
+import Contact from "./Contact"
 import Education from "./Education"
 import Programming from "./Programming"
 import Project from "./Project"
@@ -214,6 +215,17 @@ function App() {
             What my Client says about me
           </span>
           <Testimonials />
+        </div>
+      </div>
+      {/* CONTACT-ME-SECTION */}
+      <div className="contact-me-part">
+        <div className="relative-bg"></div>
+        <div className="contact-inner-part d-flex flex-column">
+          <span className="about-me-text text-white">Contact Me</span>
+          <span className="why-text-sub mb-5 text-white">
+            Let's keep in touch
+          </span>
+          <Contact />
         </div>
       </div>
     </div>
