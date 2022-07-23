@@ -28,7 +28,7 @@ function App() {
       <div className="navbar-option-mobile bg-new">
         <div className="d-flex flex-row justify-content-between">
           <span className="brand-name d-flex align-item-center my-3 ">
-            &#174; CODING HEROES..!!
+            &#174; CODING HEROES.!
           </span>
           <div className="bars mx-5" onClick={() => setopennav(!opennav)}></div>
         </div>
