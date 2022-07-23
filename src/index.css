@@ -4,6 +4,9 @@
   --secondary-app-color: #001528;
   --standout-color: #fffb00;
 }
+a {
+  text-decoration: none;
+}
 .App {
 }
 * {

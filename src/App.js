@@ -43,14 +43,44 @@ function App() {
       >
         <span className="brand-name"> CODING HEROES..!!</span>
         <div className="d-flex flex-rows">
-          <span className="mx-4 nav-items">Home</span>
-          <span className="mx-4 nav-items">About Me</span>
-          <span className="mx-4 nav-items">Resumee</span>
-          <span className="mx-4 nav-items">Testimonial</span>
-          <span className="mx-4 nav-items">Contact me</span>
+          <a
+            href="#Home"
+            className="mx-4 nav-items"
+            onClick={() => setopennav(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#Aboutme"
+            className="mx-4 nav-items"
+            onClick={() => setopennav(false)}
+          >
+            About Me
+          </a>
+          <a
+            href="#Resume"
+            className="mx-4 nav-items"
+            onClick={() => setopennav(false)}
+          >
+            Resumee
+          </a>
+          <a
+            href="#Testimonials"
+            className="mx-4 nav-items"
+            onClick={() => setopennav(false)}
+          >
+            Testimonials
+          </a>
+          <a
+            href="#Contactme"
+            className="mx-4 nav-items"
+            onClick={() => setopennav(false)}
+          >
+            Contact me
+          </a>
         </div>
       </nav>
-      <div className="herosection px-10 py-2">
+      <div className="herosection px-10 py-2" id="Home">
         <div className="heterosection-2 row justify-content-center">
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="d-flex flex-column justify-content-center Im-text-section">
@@ -65,8 +95,16 @@ function App() {
                 Operation..!!
               </span>
               <div className="d-flex flex-row justify-content-center mt-5">
-                <button className="btn-hire-me">Hire me!</button>
-                <button className="btn-resume-me">My-Resume!</button>
+                <a href="#contactme" className="btn-hire-me">
+                  Hire me!
+                </a>
+                <a
+                  href="https://res.cloudinary.com/dbmn882qe/image/upload/v1658544786/RESUMEE_For_WebDevelopment4_hso4es.png"
+                  className="btn-resume-me"
+                  target="_blank"
+                >
+                  My-Resume!
+                </a>
               </div>
             </div>
           </div>
@@ -83,7 +121,7 @@ function App() {
         <br />
         <br />
       </div>
-      <div className="about-me-section aboutme-inside my-5">
+      <div className="about-me-section aboutme-inside my-5" id="Aboutme">
         <div className="d-flex flex-column">
           <span className="about-me-text">About Me</span>
           <span className="why-text-sub">Why Choose Me ?</span>
@@ -138,7 +176,7 @@ function App() {
         </div>
       </div>
       {/* RESUME OUTER SECTION */}
-      <div className="resume-outer-section d-flex flex-column">
+      <div className="resume-outer-section d-flex flex-column" id="Resume">
         <span className="about-me-text">Resume</span>
         <span className="why-text-sub text-white">
           My formal Bio details 📚
@@ -225,7 +263,7 @@ function App() {
         </div>
       </div>
       {/*-------- TESTIMONIALS PART---------- */}
-      <div className="testimonials-part my-5">
+      <div className="testimonials-part my-5" id="Testimonials">
         <div className="testimonials-innerpart d-flex flex-column">
           <span className="about-me-text">Testimonials</span>
           <span className="why-text-sub mb-5">
@@ -235,7 +273,7 @@ function App() {
         </div>
       </div>
       {/* CONTACT-ME-SECTION */}
-      <div className="contact-me-part">
+      <div className="contact-me-part" id="Contactme">
         <div className="relative-bg"></div>
         <div className="contact-inner-part d-flex flex-column">
           <span className="about-me-text text-white">Contact Me</span>
