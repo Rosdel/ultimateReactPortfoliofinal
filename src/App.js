@@ -12,6 +12,7 @@ function App() {
   const [workhistory, setworkhistory] = useState(false)
   const [programmings, setprogrammings] = useState(false)
   const [projects, setprojects] = useState(false)
+  const [opennav, setopennav] = useState(false)
   function SetAllFalse() {
     seteducation(false)
     setworkhistory(false)
@@ -24,17 +25,32 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="herosection px-10 py-5">
-        <nav className="d-flex flex-row justify-content-between">
-          <span className="brand-name"> &#174; CODING HEROES..!!</span>
-          <div className="d-flex flex-row">
-            <span className="mx-4 nav-items">Home</span>
-            <span className="mx-4 nav-items">About Me</span>
-            <span className="mx-4 nav-items">Resumee</span>
-            <span className="mx-4 nav-items">Testimonial</span>
-            <span className="mx-4 nav-items">Contact me</span>
-          </div>
-        </nav>
+      <div className="navbar-option-mobile bg-new">
+        <div className="d-flex flex-row justify-content-between">
+          <span className="brand-name d-flex align-item-center my-3 ">
+            &#174; CODING HEROES..!!
+          </span>
+          <div className="bars mx-5" onClick={() => setopennav(!opennav)}></div>
+        </div>
+      </div>
+
+      <nav
+        className={
+          !opennav
+            ? "d-flex flex-rows navbar-new bg-new px-9 py-5 transition-all"
+            : "d-flex flex-rows navbar-fixed-new bg-new px-9 py-5 transition-all"
+        }
+      >
+        <span className="brand-name"> CODING HEROES..!!</span>
+        <div className="d-flex flex-rows">
+          <span className="mx-4 nav-items">Home</span>
+          <span className="mx-4 nav-items">About Me</span>
+          <span className="mx-4 nav-items">Resumee</span>
+          <span className="mx-4 nav-items">Testimonial</span>
+          <span className="mx-4 nav-items">Contact me</span>
+        </div>
+      </nav>
+      <div className="herosection px-10 py-2">
         <div className="heterosection-2 row justify-content-center">
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div className="d-flex flex-column justify-content-center Im-text-section">
@@ -81,6 +97,7 @@ function App() {
               justify-content-center"
             >
               <lottie-player
+                className="lottie-1"
                 src="https://assets2.lottiefiles.com/private_files/lf30_igfaivqx.json"
                 background="transparent"
                 speed="1"
