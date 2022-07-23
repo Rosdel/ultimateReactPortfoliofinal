@@ -378,3 +378,10 @@
     width: 80%;
   }
 }
+/* //second pattern queryy media */
+
+@media all and (max-width: 402px) {
+  .brand-name {
+    font-size: 0.7rem;
+  }
+}
