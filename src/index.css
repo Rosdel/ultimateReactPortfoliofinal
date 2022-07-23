@@ -373,4 +373,11 @@
   .resume-new-section {
     width: 100% !important;
   }
+  .contact-me-card {
+    background: #1c1c1c;
+    width: 100%;
+    box-shadow: 10px 10px 63px 4px rgb(233, 200, 200);
+    /* height: 500px; */
+    margin-inline: auto;
+  }
 }
