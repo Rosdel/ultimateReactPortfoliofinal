@@ -95,7 +95,7 @@ function App() {
                 Operation..!!
               </span>
               <div className="d-flex flex-row justify-content-center mt-5">
-                <a href="#contactme" className="btn-hire-me">
+                <a href="#Contactme" className="btn-hire-me">
                   Hire me!
                 </a>
                 <a

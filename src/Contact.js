@@ -1,9 +1,35 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 import "./contact.css"
 export default function Contact() {
   const [name, setname] = useState("")
   const [email, setemail] = useState("")
+  const [subject, setsubject] = useState("")
+  const form = useRef()
+
   const [message, setmessage] = useState("")
+
+  function sendEmail(e) {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "service_94sra1k",
+        "template_2fkixqa",
+        form.current,
+        "vxyTQDuoaNvg-JIKJ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
   return (
     <>
       <div>
@@ -22,7 +48,11 @@ export default function Contact() {
             </div>
           </div>
           <div className="col-lg-6 col-md-5 col-sm-12 my-auto">
-            <div className="d-flex flex-column card-contact-right">
+            <form
+              onSubmit={sendEmail}
+              ref={form}
+              className="d-flex flex-column card-contact-right"
+            >
               <div className="input-group my-3 d-flex flex-column">
                 <label>Name</label>
                 <input
@@ -33,8 +63,10 @@ export default function Contact() {
                   type="text"
                   placeholder="Enter your Name"
                   className="input-groups"
+                  name="name"
                 />
               </div>
+
               <div className="input-group my-3 d-flex flex-column">
                 <label>Email</label>
                 <input
@@ -42,28 +74,46 @@ export default function Contact() {
                   onChange={(e) => {
                     setemail(e.target.value)
                   }}
-                  type="text"
+                  type="email"
                   placeholder="Enter your Email"
                   className="input-groups"
+                  name="email"
                 />
               </div>
               <div className="input-group my-3 d-flex flex-column">
-                <label>Message</label>
-                <textarea
-                  value={message}
+                <label>Subject</label>
+                <input
+                  value={subject}
                   onChange={(e) => {
-                    setmessage(e.target.value)
+                    setsubject(e.target.value)
                   }}
                   type="text"
-                  placeholder="Enter your message"
+                  placeholder="Enter your subject"
                   className="input-groups"
+                  name="subject"
                 />
               </div>
 
               <div className="input-group my-3 d-flex flex-column">
-                <button className="btn btn-success">Send Message</button>
+                <label>Message</label>
+                <textarea
+                  onChange={(e) => {
+                    setmessage(e.target.value)
+                  }}
+                  placeholder="Enter your message"
+                  className="input-groups"
+                  name="message"
+                ></textarea>
               </div>
-            </div>
+
+              <div className="input-group my-3 d-flex flex-column">
+                <input
+                  className="btn btn-success"
+                  type="submit"
+                  value="Send Message"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
