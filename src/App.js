@@ -1,27 +1,54 @@
-import { useState } from "react"
-import "./App.css"
-import Contact from "./Contact"
-import Education from "./Education"
-import Programming from "./Programming"
-import Project from "./Project"
-import Testimonials from "./Testimonials"
-import Work from "./Work"
+import React, { Component } from "react";
+import { useRef, useState } from "react";
+import "./App.css";
+import Contact from "./Contact";
+import Education from "./Education";
+import Programming from "./Programming";
+import Project from "./Project";
+import Testimonials from "./Testimonials";
+import Work from "./Work";
+import Typed from "typed.js";
+import { useEffect } from "react";
 
 function App() {
-  const [education, seteducation] = useState(true)
-  const [workhistory, setworkhistory] = useState(false)
-  const [programmings, setprogrammings] = useState(false)
-  const [projects, setprojects] = useState(false)
-  const [opennav, setopennav] = useState(false)
+  const [education, seteducation] = useState(true);
+  const [workhistory, setworkhistory] = useState(false);
+  const [programmings, setprogrammings] = useState(false);
+  const [projects, setprojects] = useState(false);
+  const [opennav, setopennav] = useState(false);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "Enthusiastic Dev 😎",
+        "FullStack Developer💻",
+        "JAVA🍵 || Spring Boot ☕",
+        "React.js 👓",
+        "Data Analytics",
+      ],
+      startDelay: 0,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 100,
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+      autoInsertCss: true,
+      cursorChar: "|",
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+  const el = useRef(null);
   function SetAllFalse() {
-    seteducation(false)
-    setworkhistory(false)
-    setprogrammings(false)
-    setprojects(false)
+    seteducation(false);
+    setworkhistory(false);
+    setprogrammings(false);
+    setprojects(false);
   }
   function ChangeState(function1, state1) {
-    SetAllFalse()
-    function1(state1)
+    SetAllFalse();
+    function1(state1);
   }
   return (
     <div className="App">
@@ -87,8 +114,8 @@ function App() {
               <span className="Im-text">
                 Hello I'm <span className="name-Im-text"> Rosdell Denish!</span>
               </span>
-              <span className="Im-text-enthusiatic py-2">
-                Enthusiastic Dev 😎
+              <span className="Im-text-enthusiatic py-2" ref={el}>
+                {/* Enthusiastic Dev 😎 */}
               </span>
               <span className="Im-text-subheading">
                 Knack of building applications with Front and BackEnd
@@ -210,7 +237,7 @@ function App() {
                       : "selected resume-options-items"
                   }
                   onClick={() => {
-                    ChangeState(seteducation, true)
+                    ChangeState(seteducation, true);
                   }}
                 >
                   Education
@@ -222,7 +249,7 @@ function App() {
                       : "selected resume-options-items"
                   }
                   onClick={() => {
-                    ChangeState(setworkhistory, true)
+                    ChangeState(setworkhistory, true);
                   }}
                 >
                   Work
@@ -234,7 +261,7 @@ function App() {
                       : "selected resume-options-items"
                   }
                   onClick={() => {
-                    ChangeState(setprogrammings, true)
+                    ChangeState(setprogrammings, true);
                   }}
                 >
                   Programming
@@ -246,7 +273,7 @@ function App() {
                       : "selected resume-options-items"
                   }
                   onClick={() => {
-                    ChangeState(setprojects, true)
+                    ChangeState(setprojects, true);
                   }}
                 >
                   Projects
@@ -284,7 +311,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
