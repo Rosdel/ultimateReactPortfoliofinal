@@ -21,19 +21,19 @@ function App() {
       strings: [
         "Enthusiastic Dev 😎",
         "FullStack Developer💻",
-        "JAVA🍵 || Spring Boot ☕",
+        "JAVA☕|| Spring Boot☕",
         "React.js 👓",
-        "Data Analytics",
+        "Data Analy tics",
       ],
       startDelay: 0,
-      typeSpeed: 100,
+      typeSpeed: 20,
       backSpeed: 100,
       backDelay: 100,
       smartBackspace: true,
       loop: true,
       showCursor: true,
       autoInsertCss: true,
-      cursorChar: "|",
+      // cursorChar: "|",
     });
     return () => {
       typed.destroy();
@@ -114,7 +114,11 @@ function App() {
               <span className="Im-text">
                 Hello I'm <span className="name-Im-text"> Rosdell Denish!</span>
               </span>
-              <span className="Im-text-enthusiatic py-2" ref={el}>
+              <span
+                className="Im-text-enthusiatic py-2"
+                ref={el}
+                style={{ minHeight: "80px" }}
+              >
                 {/* Enthusiastic Dev 😎 */}
               </span>
               <span className="Im-text-subheading">
