@@ -122,8 +122,7 @@ function App() {
                 {/* Enthusiastic Dev 😎 */}
               </span>
               <span className="Im-text-subheading">
-                Knack of building applications with Front and BackEnd
-                Operation..!!
+                Knack of building Software applications..!!
               </span>
               <div className="d-flex flex-row justify-content-center mt-5">
                 <a href="#Contactme" className="btn-hire-me">
@@ -150,9 +149,9 @@ function App() {
           </div>
         </div>
         <br />
-        <br />
+        <br id="Aboutme" />
       </div>
-      <div className="about-me-section aboutme-inside my-5" id="Aboutme">
+      <div className="about-me-section aboutme-inside my-5">
         <div className="d-flex flex-column">
           <span className="about-me-text">About Me</span>
           <span className="why-text-sub">Why Choose Me ?</span>
@@ -304,7 +303,7 @@ function App() {
         </div>
       </div>
       {/* CONTACT-ME-SECTION */}
-      <div className="contact-me-part" id="Contactme">
+      <div className="contact-me-part">
         <div className="relative-bg"></div>
         <div className="contact-inner-part d-flex flex-column">
           <span className="about-me-text text-white">Contact Me</span>

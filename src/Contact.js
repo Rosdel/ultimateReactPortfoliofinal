@@ -1,16 +1,16 @@
-import React, { useState, useRef } from "react"
-import emailjs from "@emailjs/browser"
-import "./contact.css"
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "./contact.css";
 export default function Contact() {
-  const [name, setname] = useState("")
-  const [email, setemail] = useState("")
-  const [subject, setsubject] = useState("")
-  const form = useRef()
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [subject, setsubject] = useState("");
+  const form = useRef();
 
-  const [message, setmessage] = useState("")
+  const [message, setmessage] = useState("");
 
   function sendEmail(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     emailjs
       .sendForm(
@@ -21,13 +21,13 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text)
+          console.log(result.text);
         },
         (error) => {
-          console.log(error.text)
+          console.log(error.text);
         }
-      )
-    e.target.reset()
+      );
+    e.target.reset();
   }
 
   return (
@@ -53,12 +53,15 @@ export default function Contact() {
               ref={form}
               className="d-flex flex-column card-contact-right"
             >
-              <div className="input-group my-3 d-flex flex-column">
+              <div
+                className="input-group my-3 d-flex flex-column"
+                id="Contactme"
+              >
                 <label>Name</label>
                 <input
                   value={name}
                   onChange={(e) => {
-                    setname(e.target.value)
+                    setname(e.target.value);
                   }}
                   type="text"
                   placeholder="Enter your Name"
@@ -72,7 +75,7 @@ export default function Contact() {
                 <input
                   value={email}
                   onChange={(e) => {
-                    setemail(e.target.value)
+                    setemail(e.target.value);
                   }}
                   type="email"
                   placeholder="Enter your Email"
@@ -85,7 +88,7 @@ export default function Contact() {
                 <input
                   value={subject}
                   onChange={(e) => {
-                    setsubject(e.target.value)
+                    setsubject(e.target.value);
                   }}
                   type="text"
                   placeholder="Enter your subject"
@@ -93,12 +96,12 @@ export default function Contact() {
                   name="subject"
                 />
               </div>
-              
+
               <div className="input-group my-3 d-flex flex-column">
                 <label>Message</label>
                 <textarea
                   onChange={(e) => {
-                    setmessage(e.target.value)
+                    setmessage(e.target.value);
                   }}
                   placeholder="Enter your message"
                   className="input-groups"
@@ -118,5 +121,5 @@ export default function Contact() {
         </div>
       </div>
     </>
-  )
+  );
 }

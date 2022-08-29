@@ -1,21 +1,24 @@
-import React from "react"
-import "./testimonials.css"
+import React from "react";
+import "./testimonials.css";
 
 export default function Testimonials() {
   const testimoniallls = [
     {
       name: "Zilla",
-      text: "This guy is incredibly awesome,I hired him and he delivered standard work before deadline.",
+      text:
+        "This guy is incredibly awesome,I hired him and he delivered standard work before deadline.",
     },
     {
       name: "Felix Onen",
-      text: "This guy is incredibly awesome,I hired him and he delivered standard work before deadline.",
+      text:
+        "Just wanted to let you know that, we shall always work with you, Thanks Rosdell for exceeding our Expectations",
     },
     {
       name: "Gunya",
-      text: "This guy is incredibly awesome,I hired him and he delivered standard work before deadline.",
+      text:
+        "We are very happy with Rosdell; very serious and consistent in his work. Rosdell and his team of programmers have always been there for us all the time. This is a person I can recommened anyone to work with.",
     },
-  ]
+  ];
 
   return (
     <>
@@ -30,10 +33,10 @@ export default function Testimonials() {
                   <span className="name">{value.name}</span>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>{" "}
     </>
-  )
+  );
 }
