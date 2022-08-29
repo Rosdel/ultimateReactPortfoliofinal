@@ -19,15 +19,15 @@ function App() {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Enthusiastic Dev 😎",
-        "FullStack Developer💻",
-        "JAVA☕|| Spring Boot☕",
+        "Applied Scientist 😎",
+        "Software Developer 💻",
+        "Java ☕|| Spring Boot",
         "React.js 👓",
-        "Data Analy tics",
+        "Data Analytics 📈",
       ],
       startDelay: 0,
-      typeSpeed: 20,
-      backSpeed: 100,
+      typeSpeed: 80,
+      backSpeed: 10,
       backDelay: 100,
       smartBackspace: true,
       loop: true,
@@ -193,12 +193,12 @@ function App() {
                 <span className="few-text">Here are few Highlights</span>
                 <span className="few-list">
                   <ul>
-                    <li>FullStacked Web Development</li>
-                    <li>Interactive front End Design</li>
-                    <li>Adobe Photoshop CC</li>
-                    <li>Data Analytics</li>
-                    <li>React.js &#38; tailwind CSS--leveling</li>
-                    <li>Node.js ,MongoDB and Express--leveling</li>
+                    <li>FullStacked Developer</li>
+
+                    <li>Adobe Photoshop CC 👩‍💻</li>
+                    <li>Data Analytics 📈</li>
+                    <li>React.js</li>
+                    <li>Java ☕ || Spring Boot </li>
                   </ul>
                 </span>
               </span>
